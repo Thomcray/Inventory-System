@@ -98,12 +98,8 @@ namespace Inventory_System
             else
             {
                 lblErrorMsg.Text = "";
-
             }
         }
-        private void login_Load(object sender, EventArgs e)
-        {
-        
-        }
+       
     }
 }

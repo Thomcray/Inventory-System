@@ -147,7 +147,7 @@ namespace Inventory_System
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.login_Load);
+            //this.Load += new System.EventHandler(this.login_Load);
             this.loginpanel.ResumeLayout(false);
             this.loginpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
