@@ -29,6 +29,8 @@ namespace Inventory_System
             _User = user;
             _login = login;
 
+            timerDateAndTime.Start();
+
         }
         // Login instance for window open parameter
         login login = new login();
@@ -217,8 +219,9 @@ namespace Inventory_System
                    
                      DialogResult saleConfirm;
                      saleConfirm = MessageBox.Show("Are you sure you want to Exit?", "Inventory System", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                       if (saleConfirm == DialogResult.Yes)
-                         Application.Exit();
+                    if (saleConfirm == DialogResult.Yes)
+                        timerDateAndTime.Stop();
+                        Application.Exit();
                     
                     break;
                 default:
@@ -244,6 +247,12 @@ namespace Inventory_System
                     MessageBox.Show("Invalid request");
                     break;
             }
+        }
+
+        private void timerDateAndTime_Tick(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now;
+            lblDateTimeNow.Text = now.ToString("F");
         }
     }
 }

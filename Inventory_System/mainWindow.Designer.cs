@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.menuPanel = new System.Windows.Forms.Panel();
             this.settingsIcon = new System.Windows.Forms.PictureBox();
@@ -60,10 +61,12 @@
             this.totalSalesPanel = new System.Windows.Forms.Panel();
             this.sumTotalSale = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
+            this.lblDateTimeNow = new System.Windows.Forms.Label();
             this.dashLogOutIcon = new System.Windows.Forms.PictureBox();
             this.lblManageUsers = new System.Windows.Forms.Label();
             this.lblLogOut = new System.Windows.Forms.Label();
             this.dashRefreshIcon = new System.Windows.Forms.PictureBox();
+            this.timerDateAndTime = new System.Windows.Forms.Timer(this.components);
             this.menuPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.settingsIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemStockIcon)).BeginInit();
@@ -457,6 +460,7 @@
             // 
             // footerPanel
             // 
+            this.footerPanel.Controls.Add(this.lblDateTimeNow);
             this.footerPanel.Controls.Add(this.dashLogOutIcon);
             this.footerPanel.Controls.Add(this.lblManageUsers);
             this.footerPanel.Controls.Add(this.lblLogOut);
@@ -464,6 +468,17 @@
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(1100, 40);
             this.footerPanel.TabIndex = 11;
+            // 
+            // lblDateTimeNow
+            // 
+            this.lblDateTimeNow.AutoSize = true;
+            this.lblDateTimeNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDateTimeNow.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTimeNow.Location = new System.Drawing.Point(3, 14);
+            this.lblDateTimeNow.Name = "lblDateTimeNow";
+            this.lblDateTimeNow.Size = new System.Drawing.Size(25, 17);
+            this.lblDateTimeNow.TabIndex = 3;
+            this.lblDateTimeNow.Text = "{?}";
             // 
             // dashLogOutIcon
             // 
@@ -508,6 +523,10 @@
             this.dashRefreshIcon.TabIndex = 12;
             this.dashRefreshIcon.TabStop = false;
             this.dashRefreshIcon.Click += new System.EventHandler(this.dashRefreshIcon_Click);
+            // 
+            // timerDateAndTime
+            // 
+            this.timerDateAndTime.Tick += new System.EventHandler(this.timerDateAndTime_Tick);
             // 
             // mainWindow
             // 
@@ -600,5 +619,7 @@
         private System.Windows.Forms.PictureBox dashRefreshIcon;
         private System.Windows.Forms.PictureBox dashLogOutIcon;
         private System.Windows.Forms.Button btnCloseMain;
+        private System.Windows.Forms.Timer timerDateAndTime;
+        private System.Windows.Forms.Label lblDateTimeNow;
     }
 }
