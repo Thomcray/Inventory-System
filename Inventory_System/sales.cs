@@ -51,13 +51,12 @@ namespace Inventory_System
             listViewTable.Columns[4].Name = "Brand";
             listViewTable.Columns[5].Name = "Unit Price";
             listViewTable.Columns[6].Name = "Cost";
+            //
+            checkDiscountValid();
 
             //PREVENT DEFAULT BLUE SELECTION OF CELL FROM LISTVIEWTABLE
             listViewTable.DefaultCellStyle.SelectionBackColor = Color.White;
             listViewTable.DefaultCellStyle.SelectionForeColor = Color.Black;
-
-            //
-            timerDateAndTime1.Start();
         }
         SqlConnection con = new SqlConnection("Data Source = localhost; Initial Catalog = Inventory; Integrated Security = True");
         private void sales_Load(object sender, EventArgs e)
@@ -139,7 +138,38 @@ namespace Inventory_System
                 MessageBox.Show(ex.Message);
             }
         }
-        
+        public void checkDiscountValid()
+        {
+            // Get coupon name and coupon value from database
+            con.Open();
+            SqlCommand discountCMD = new SqlCommand("select TOP 1 coupon_name, value, date_created, expiry_date, DAY(expiry_date) as expiryDay, validity from coupon_details where company_name = '" + _CompanyName + "' ORDER BY id DESC", con);
+            SqlDataReader discountReader;
+            discountReader = discountCMD.ExecuteReader();
+            while (discountReader.Read())
+            {
+                DateTime dateCreated = Convert.ToDateTime(discountReader["date_created"]);
+                string coupon_ = discountReader["coupon_name"].ToString();
+                string _couponValue = discountReader["value"].ToString();
+                string _expiryDate_ = discountReader["expiry_date"].ToString();
+                string _expiryDay = discountReader["expiryDay"].ToString();
+                //Check if thisDay Time&Date equals _expiryDate_ to discard discount
+                if (thisDay > Convert.ToDateTime(_expiryDate_))
+                {
+                    txtSaleDiscount.Text = "";
+                    lblDiscountName.Text = "";
+                    discountMsgPanel.Visible = true;
+                    lblDBExpiryDate.Text = "Coupon has expired";
+                    //this.Hide();
+                }
+                else
+                {
+                    lblDiscountName.Text = coupon_ + " is applied";
+                    txtSaleDiscount.Text = _couponValue;
+                    lblDBExpiryDate.Text = _expiryDate_;
+                }
+            }
+            con.Close();
+        }
         private void btnAddSaleList_Click(object sender, EventArgs e)
         {
             fillListBox();
@@ -298,7 +328,6 @@ namespace Inventory_System
                     }
                     listViewTable.Rows.Clear();
                     lblSalesMsgs.Text = "Success. Receipt ready for printing";
-                    //Open print page
                     print();
                 }
                 catch (Exception ex)
@@ -349,6 +378,7 @@ namespace Inventory_System
                 searchSDA.Fill(SDT);
                 searchResultView.DataSource = SDT;
                 searchResultView.Visible = true;
+                checkDiscountValid();
             }
             catch (Exception ex)
             {
@@ -419,43 +449,6 @@ namespace Inventory_System
         private void btnRemoveDMP_Click(object sender, EventArgs e)
         {
             discountMsgPanel.Visible = false;
-        }
-
-        private void timerDateAndTime1_Tick(object sender, EventArgs e)
-        {
-            DateTime _now = DateTime.Now;
-            lblDateTimeNow1.Text = _now.ToString("F");
-            // Get coupon name and coupon value from database
-            con.Close();
-            con.Open();
-            SqlCommand discountCMD = new SqlCommand("select TOP 1 coupon_name, value, date_created, expiry_date, DAY(expiry_date) as expiryDay, validity from coupon_details where company_name = '" + _CompanyName + "' ORDER BY id DESC", con);
-            SqlDataReader discountReader;
-            discountReader = discountCMD.ExecuteReader();
-            while (discountReader.Read())
-            {
-                DateTime dateCreated = Convert.ToDateTime(discountReader["date_created"]);
-                string coupon_ = discountReader["coupon_name"].ToString();
-                string _couponValue = discountReader["value"].ToString();
-                string _expiryDate_ = discountReader["expiry_date"].ToString();
-                string _expiryDay = discountReader["expiryDay"].ToString();
-                //Check if thisDay Time&Date equals _expiryDate_ to discard discount
-                //MessageBox.Show(lblDateTimeNow1.Text);
-                if (Convert.ToDateTime(lblDateTimeNow1.Text) > Convert.ToDateTime(_expiryDate_))
-                {
-                    txtSaleDiscount.Text = "";
-                    lblDiscountName.Text = "";
-                    discountMsgPanel.Visible = true;
-                    btnRemoveDMP.Visible = false;
-                    lblDBExpiryDate.Text = "Coupon has expired";
-                }
-                else
-                {
-                    lblDiscountName.Text = coupon_ + " is applied";
-                    txtSaleDiscount.Text = _couponValue;
-                    lblDBExpiryDate.Text = _expiryDate_;
-                }
-            }
-            con.Close();
         }
     }
 }
