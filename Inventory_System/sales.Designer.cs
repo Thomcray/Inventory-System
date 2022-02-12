@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.saleTopPanel = new System.Windows.Forms.Panel();
             this.btnCloseSale = new System.Windows.Forms.Button();
             this.saleSearchPanel = new System.Windows.Forms.Panel();
@@ -74,8 +73,6 @@
             this.lblTxnID = new System.Windows.Forms.Label();
             this.removeListItemIcon = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.timerDateAndTime1 = new System.Windows.Forms.Timer(this.components);
-            this.lblDateTimeNow1 = new System.Windows.Forms.Label();
             this.saleTopPanel.SuspendLayout();
             this.saleSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchSaleIcon)).BeginInit();
@@ -519,9 +516,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 18);
+            this.label2.Size = new System.Drawing.Size(194, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Coupon will expire on ::  ";
+            this.label2.Text = "Coupon will expiry on ::  ";
             // 
             // txtTxnID
             // 
@@ -557,26 +554,11 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // timerDateAndTime1
-            // 
-            this.timerDateAndTime1.Tick += new System.EventHandler(this.timerDateAndTime1_Tick);
-            // 
-            // lblDateTimeNow1
-            // 
-            this.lblDateTimeNow1.AutoSize = true;
-            this.lblDateTimeNow1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTimeNow1.Location = new System.Drawing.Point(9, 628);
-            this.lblDateTimeNow1.Name = "lblDateTimeNow1";
-            this.lblDateTimeNow1.Size = new System.Drawing.Size(25, 17);
-            this.lblDateTimeNow1.TabIndex = 25;
-            this.lblDateTimeNow1.Text = "{?}";
-            // 
             // sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 711);
-            this.Controls.Add(this.lblDateTimeNow1);
             this.Controls.Add(this.lblTxnID);
             this.Controls.Add(this.txtTxnID);
             this.Controls.Add(this.discountMsgPanel);
@@ -668,7 +650,5 @@
         private System.Windows.Forms.TextBox txtTxnID;
         private System.Windows.Forms.Label lblTxnID;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Timer timerDateAndTime1;
-        private System.Windows.Forms.Label lblDateTimeNow1;
     }
 }
