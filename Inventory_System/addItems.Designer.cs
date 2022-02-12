@@ -52,12 +52,6 @@
             this.txtNewItemDesc = new System.Windows.Forms.TextBox();
             this.txtNewItemID = new System.Windows.Forms.TextBox();
             this.updateItemView = new System.Windows.Forms.DataGridView();
-            this.updItemsGroup = new System.Windows.Forms.GroupBox();
-            this.updMsgPanel = new System.Windows.Forms.Panel();
-            this.lblUpdMsg = new System.Windows.Forms.Label();
-            this.inventoryDataSet = new Inventory_System.InventoryDataSet();
-            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.stockTableAdapter = new Inventory_System.InventoryDataSetTableAdapters.stockTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,15 +59,21 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateupdatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.stockBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.inventoryDataSet = new Inventory_System.InventoryDataSet();
+            this.updItemsGroup = new System.Windows.Forms.GroupBox();
+            this.updMsgPanel = new System.Windows.Forms.Panel();
+            this.lblUpdMsg = new System.Windows.Forms.Label();
+            this.stockTableAdapter = new Inventory_System.InventoryDataSetTableAdapters.stockTableAdapter();
             this.panel1.SuspendLayout();
             this.addsItemGroup.SuspendLayout();
             this.addItemMsgPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intNewQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateItemView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).BeginInit();
             this.updItemsGroup.SuspendLayout();
             this.updMsgPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -230,6 +230,7 @@
             // 
             // txtNewCategoryCombo
             // 
+            this.txtNewCategoryCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtNewCategoryCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewCategoryCombo.FormattingEnabled = true;
             this.txtNewCategoryCombo.Location = new System.Drawing.Point(323, 98);
@@ -322,53 +323,6 @@
             this.updateItemView.Size = new System.Drawing.Size(643, 319);
             this.updateItemView.TabIndex = 3;
             this.updateItemView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.updateItemView_CellContentClick);
-            //this.updateItemView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.updateItemView_CellValueChanged);
-            // 
-            // updItemsGroup
-            // 
-            this.updItemsGroup.Controls.Add(this.updMsgPanel);
-            this.updItemsGroup.Controls.Add(this.updateItemView);
-            this.updItemsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updItemsGroup.Location = new System.Drawing.Point(598, 77);
-            this.updItemsGroup.Name = "updItemsGroup";
-            this.updItemsGroup.Size = new System.Drawing.Size(659, 376);
-            this.updItemsGroup.TabIndex = 4;
-            this.updItemsGroup.TabStop = false;
-            this.updItemsGroup.Text = "Update Items";
-            // 
-            // updMsgPanel
-            // 
-            this.updMsgPanel.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.updMsgPanel.Controls.Add(this.lblUpdMsg);
-            this.updMsgPanel.Location = new System.Drawing.Point(8, 18);
-            this.updMsgPanel.Name = "updMsgPanel";
-            this.updMsgPanel.Size = new System.Drawing.Size(643, 32);
-            this.updMsgPanel.TabIndex = 4;
-            // 
-            // lblUpdMsg
-            // 
-            this.lblUpdMsg.AutoSize = true;
-            this.lblUpdMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUpdMsg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblUpdMsg.Location = new System.Drawing.Point(3, 6);
-            this.lblUpdMsg.Name = "lblUpdMsg";
-            this.lblUpdMsg.Size = new System.Drawing.Size(269, 20);
-            this.lblUpdMsg.TabIndex = 0;
-            this.lblUpdMsg.Text = "Columns with asterisk (*) are editable";
-            // 
-            // inventoryDataSet
-            // 
-            this.inventoryDataSet.DataSetName = "InventoryDataSet";
-            this.inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // stockBindingSource
-            // 
-            this.stockBindingSource.DataMember = "stock";
-            this.stockBindingSource.DataSource = this.inventoryDataSet;
-            // 
-            // stockTableAdapter
-            // 
-            this.stockTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -424,6 +378,52 @@
             this.Update.Text = "Update";
             this.Update.UseColumnTextForButtonValue = true;
             // 
+            // stockBindingSource
+            // 
+            this.stockBindingSource.DataMember = "stock";
+            this.stockBindingSource.DataSource = this.inventoryDataSet;
+            // 
+            // inventoryDataSet
+            // 
+            this.inventoryDataSet.DataSetName = "InventoryDataSet";
+            this.inventoryDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // updItemsGroup
+            // 
+            this.updItemsGroup.Controls.Add(this.updMsgPanel);
+            this.updItemsGroup.Controls.Add(this.updateItemView);
+            this.updItemsGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updItemsGroup.Location = new System.Drawing.Point(598, 77);
+            this.updItemsGroup.Name = "updItemsGroup";
+            this.updItemsGroup.Size = new System.Drawing.Size(659, 376);
+            this.updItemsGroup.TabIndex = 4;
+            this.updItemsGroup.TabStop = false;
+            this.updItemsGroup.Text = "Update Items";
+            // 
+            // updMsgPanel
+            // 
+            this.updMsgPanel.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.updMsgPanel.Controls.Add(this.lblUpdMsg);
+            this.updMsgPanel.Location = new System.Drawing.Point(8, 18);
+            this.updMsgPanel.Name = "updMsgPanel";
+            this.updMsgPanel.Size = new System.Drawing.Size(643, 32);
+            this.updMsgPanel.TabIndex = 4;
+            // 
+            // lblUpdMsg
+            // 
+            this.lblUpdMsg.AutoSize = true;
+            this.lblUpdMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdMsg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblUpdMsg.Location = new System.Drawing.Point(3, 6);
+            this.lblUpdMsg.Name = "lblUpdMsg";
+            this.lblUpdMsg.Size = new System.Drawing.Size(269, 20);
+            this.lblUpdMsg.TabIndex = 0;
+            this.lblUpdMsg.Text = "Columns with asterisk (*) are editable";
+            // 
+            // stockTableAdapter
+            // 
+            this.stockTableAdapter.ClearBeforeFill = true;
+            // 
             // addItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,11 +444,11 @@
             this.addItemMsgPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.intNewQty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.updateItemView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).EndInit();
             this.updItemsGroup.ResumeLayout(false);
             this.updMsgPanel.ResumeLayout(false);
             this.updMsgPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stockBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

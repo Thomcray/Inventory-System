@@ -40,10 +40,11 @@ namespace Inventory_System
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.loginpanel = new System.Windows.Forms.Panel();
+            this.lblRegisterNew = new System.Windows.Forms.Label();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.passwordIcon = new System.Windows.Forms.PictureBox();
             this.userIcon = new System.Windows.Forms.PictureBox();
-            this.lblRegisterNew = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
@@ -96,6 +97,7 @@ namespace Inventory_System
             // 
             // loginpanel
             // 
+            this.loginpanel.Controls.Add(this.lblLogin);
             this.loginpanel.Controls.Add(this.lblRegisterNew);
             this.loginpanel.Controls.Add(this.lblErrorMsg);
             this.loginpanel.Controls.Add(this.lblForgotPassword);
@@ -109,12 +111,24 @@ namespace Inventory_System
             this.loginpanel.Size = new System.Drawing.Size(336, 430);
             this.loginpanel.TabIndex = 6;
             // 
+            // lblRegisterNew
+            // 
+            this.lblRegisterNew.AutoSize = true;
+            this.lblRegisterNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterNew.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegisterNew.Location = new System.Drawing.Point(81, 330);
+            this.lblRegisterNew.Name = "lblRegisterNew";
+            this.lblRegisterNew.Size = new System.Drawing.Size(201, 16);
+            this.lblRegisterNew.TabIndex = 7;
+            this.lblRegisterNew.Text = "Don\'t have an account? Register";
+            this.lblRegisterNew.Click += new System.EventHandler(this.lblRegisterNew_Click);
+            // 
             // lblErrorMsg
             // 
             this.lblErrorMsg.AutoSize = true;
             this.lblErrorMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMsg.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblErrorMsg.Location = new System.Drawing.Point(4, 39);
+            this.lblErrorMsg.Location = new System.Drawing.Point(4, 61);
             this.lblErrorMsg.Name = "lblErrorMsg";
             this.lblErrorMsg.Size = new System.Drawing.Size(0, 13);
             this.lblErrorMsg.TabIndex = 6;
@@ -138,17 +152,17 @@ namespace Inventory_System
             this.userIcon.TabIndex = 1;
             this.userIcon.TabStop = false;
             // 
-            // lblRegisterNew
+            // lblLogin
             // 
-            this.lblRegisterNew.AutoSize = true;
-            this.lblRegisterNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegisterNew.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblRegisterNew.Location = new System.Drawing.Point(81, 330);
-            this.lblRegisterNew.Name = "lblRegisterNew";
-            this.lblRegisterNew.Size = new System.Drawing.Size(201, 16);
-            this.lblRegisterNew.TabIndex = 7;
-            this.lblRegisterNew.Text = "Don\'t have an account? Register";
-            this.lblRegisterNew.Click += new System.EventHandler(this.lblRegisterNew_Click);
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLogin.Location = new System.Drawing.Point(129, 25);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(77, 30);
+            this.lblLogin.TabIndex = 8;
+            this.lblLogin.Text = "Login";
             // 
             // login
             // 
@@ -179,6 +193,7 @@ namespace Inventory_System
         private System.Windows.Forms.Panel loginpanel;
         private System.Windows.Forms.Label lblErrorMsg;
         private System.Windows.Forms.Label lblRegisterNew;
+        private System.Windows.Forms.Label lblLogin;
     }
 }
 

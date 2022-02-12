@@ -91,6 +91,13 @@ namespace Inventory_System
                 lblPasswordMsg.BackColor = Color.Red;
                 return;
             }
+            else if(usernameCombo.Text != "admin")
+            {
+                lblPasswordMsg.Text = "Please select admin from dropdown";
+                lblPasswordMsg.ForeColor = SystemColors.Control;
+                lblPasswordMsg.BackColor = Color.Red;
+                return;
+            }
             else
             {
                 con.Open();

@@ -93,6 +93,7 @@
             this.saleTopPanel.AccessibleRole = System.Windows.Forms.AccessibleRole.TitleBar;
             this.saleTopPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.saleTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.saleTopPanel.Controls.Add(this.lblDateTimeNow1);
             this.saleTopPanel.Controls.Add(this.btnCloseSale);
             this.saleTopPanel.Location = new System.Drawing.Point(-1, -1);
             this.saleTopPanel.Name = "saleTopPanel";
@@ -564,11 +565,13 @@
             // lblDateTimeNow1
             // 
             this.lblDateTimeNow1.AutoSize = true;
+            this.lblDateTimeNow1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDateTimeNow1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTimeNow1.Location = new System.Drawing.Point(9, 628);
+            this.lblDateTimeNow1.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDateTimeNow1.Location = new System.Drawing.Point(8, 14);
             this.lblDateTimeNow1.Name = "lblDateTimeNow1";
             this.lblDateTimeNow1.Size = new System.Drawing.Size(25, 17);
-            this.lblDateTimeNow1.TabIndex = 25;
+            this.lblDateTimeNow1.TabIndex = 26;
             this.lblDateTimeNow1.Text = "{?}";
             // 
             // sales
@@ -576,7 +579,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 711);
-            this.Controls.Add(this.lblDateTimeNow1);
             this.Controls.Add(this.lblTxnID);
             this.Controls.Add(this.txtTxnID);
             this.Controls.Add(this.discountMsgPanel);
@@ -603,6 +605,7 @@
             this.Text = "Sales";
             this.Load += new System.EventHandler(this.sales_Load);
             this.saleTopPanel.ResumeLayout(false);
+            this.saleTopPanel.PerformLayout();
             this.saleSearchPanel.ResumeLayout(false);
             this.saleSearchPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchSaleIcon)).EndInit();

@@ -30,6 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panelRegister = new System.Windows.Forms.Panel();
+            this.lblCPasswordRegister = new System.Windows.Forms.Label();
+            this.lblPasswordRegister = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPhoneRegister = new System.Windows.Forms.Label();
+            this.lblNameRegister = new System.Windows.Forms.Label();
+            this.lblUserRoleRegister = new System.Windows.Forms.Label();
+            this.btnRegisterLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.txtCompanyNameRegister = new System.Windows.Forms.TextBox();
             this.txtCPasswordRegister = new System.Windows.Forms.TextBox();
@@ -41,13 +48,6 @@
             this.toolTipRegister = new System.Windows.Forms.ToolTip(this.components);
             this.lblRegister = new System.Windows.Forms.Label();
             this.lblPasswordMsg = new System.Windows.Forms.Label();
-            this.btnRegisterLogin = new System.Windows.Forms.Button();
-            this.lblUserRoleRegister = new System.Windows.Forms.Label();
-            this.lblNameRegister = new System.Windows.Forms.Label();
-            this.lblPhoneRegister = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblPasswordRegister = new System.Windows.Forms.Label();
-            this.lblCPasswordRegister = new System.Windows.Forms.Label();
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,94 @@
             this.panelRegister.Name = "panelRegister";
             this.panelRegister.Size = new System.Drawing.Size(761, 433);
             this.panelRegister.TabIndex = 0;
+            // 
+            // lblCPasswordRegister
+            // 
+            this.lblCPasswordRegister.AutoSize = true;
+            this.lblCPasswordRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblCPasswordRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPasswordRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblCPasswordRegister.Location = new System.Drawing.Point(386, 211);
+            this.lblCPasswordRegister.Name = "lblCPasswordRegister";
+            this.lblCPasswordRegister.Size = new System.Drawing.Size(147, 21);
+            this.lblCPasswordRegister.TabIndex = 14;
+            this.lblCPasswordRegister.Text = "Confirm Password";
+            // 
+            // lblPasswordRegister
+            // 
+            this.lblPasswordRegister.AutoSize = true;
+            this.lblPasswordRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPasswordRegister.Location = new System.Drawing.Point(6, 211);
+            this.lblPasswordRegister.Name = "lblPasswordRegister";
+            this.lblPasswordRegister.Size = new System.Drawing.Size(82, 21);
+            this.lblPasswordRegister.TabIndex = 13;
+            this.lblPasswordRegister.Text = "Password";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(386, 121);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 21);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Company Name";
+            // 
+            // lblPhoneRegister
+            // 
+            this.lblPhoneRegister.AutoSize = true;
+            this.lblPhoneRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblPhoneRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblPhoneRegister.Location = new System.Drawing.Point(8, 121);
+            this.lblPhoneRegister.Name = "lblPhoneRegister";
+            this.lblPhoneRegister.Size = new System.Drawing.Size(126, 21);
+            this.lblPhoneRegister.TabIndex = 11;
+            this.lblPhoneRegister.Text = "Phone Number";
+            // 
+            // lblNameRegister
+            // 
+            this.lblNameRegister.AutoSize = true;
+            this.lblNameRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNameRegister.Location = new System.Drawing.Point(386, 15);
+            this.lblNameRegister.Name = "lblNameRegister";
+            this.lblNameRegister.Size = new System.Drawing.Size(58, 21);
+            this.lblNameRegister.TabIndex = 10;
+            this.lblNameRegister.Text = "Name";
+            // 
+            // lblUserRoleRegister
+            // 
+            this.lblUserRoleRegister.AutoSize = true;
+            this.lblUserRoleRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblUserRoleRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserRoleRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblUserRoleRegister.Location = new System.Drawing.Point(6, 15);
+            this.lblUserRoleRegister.Name = "lblUserRoleRegister";
+            this.lblUserRoleRegister.Size = new System.Drawing.Size(88, 21);
+            this.lblUserRoleRegister.TabIndex = 9;
+            this.lblUserRoleRegister.Text = "Username";
+            // 
+            // btnRegisterLogin
+            // 
+            this.btnRegisterLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnRegisterLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegisterLogin.FlatAppearance.BorderSize = 0;
+            this.btnRegisterLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegisterLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnRegisterLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegisterLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegisterLogin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnRegisterLogin.Location = new System.Drawing.Point(212, 376);
+            this.btnRegisterLogin.Name = "btnRegisterLogin";
+            this.btnRegisterLogin.Size = new System.Drawing.Size(357, 37);
+            this.btnRegisterLogin.TabIndex = 8;
+            this.btnRegisterLogin.Text = "Already have an Account? Login";
+            this.btnRegisterLogin.UseVisualStyleBackColor = false;
+            this.btnRegisterLogin.Click += new System.EventHandler(this.btnRegisterLogin_Click);
             // 
             // btnRegister
             // 
@@ -155,6 +243,7 @@
             // 
             // usernameCombo
             // 
+            this.usernameCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.usernameCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usernameCombo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usernameCombo.FormattingEnabled = true;
@@ -186,94 +275,6 @@
             this.lblPasswordMsg.Name = "lblPasswordMsg";
             this.lblPasswordMsg.Size = new System.Drawing.Size(0, 17);
             this.lblPasswordMsg.TabIndex = 8;
-            // 
-            // btnRegisterLogin
-            // 
-            this.btnRegisterLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnRegisterLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRegisterLogin.FlatAppearance.BorderSize = 0;
-            this.btnRegisterLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRegisterLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnRegisterLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegisterLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegisterLogin.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnRegisterLogin.Location = new System.Drawing.Point(212, 376);
-            this.btnRegisterLogin.Name = "btnRegisterLogin";
-            this.btnRegisterLogin.Size = new System.Drawing.Size(357, 37);
-            this.btnRegisterLogin.TabIndex = 8;
-            this.btnRegisterLogin.Text = "Already have an Account? Login";
-            this.btnRegisterLogin.UseVisualStyleBackColor = false;
-            this.btnRegisterLogin.Click += new System.EventHandler(this.btnRegisterLogin_Click);
-            // 
-            // lblUserRoleRegister
-            // 
-            this.lblUserRoleRegister.AutoSize = true;
-            this.lblUserRoleRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblUserRoleRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserRoleRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUserRoleRegister.Location = new System.Drawing.Point(6, 15);
-            this.lblUserRoleRegister.Name = "lblUserRoleRegister";
-            this.lblUserRoleRegister.Size = new System.Drawing.Size(88, 21);
-            this.lblUserRoleRegister.TabIndex = 9;
-            this.lblUserRoleRegister.Text = "Username";
-            // 
-            // lblNameRegister
-            // 
-            this.lblNameRegister.AutoSize = true;
-            this.lblNameRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblNameRegister.Location = new System.Drawing.Point(386, 15);
-            this.lblNameRegister.Name = "lblNameRegister";
-            this.lblNameRegister.Size = new System.Drawing.Size(58, 21);
-            this.lblNameRegister.TabIndex = 10;
-            this.lblNameRegister.Text = "Name";
-            // 
-            // lblPhoneRegister
-            // 
-            this.lblPhoneRegister.AutoSize = true;
-            this.lblPhoneRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPhoneRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPhoneRegister.Location = new System.Drawing.Point(8, 121);
-            this.lblPhoneRegister.Name = "lblPhoneRegister";
-            this.lblPhoneRegister.Size = new System.Drawing.Size(126, 21);
-            this.lblPhoneRegister.TabIndex = 11;
-            this.lblPhoneRegister.Text = "Phone Number";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(386, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 21);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Company Name";
-            // 
-            // lblPasswordRegister
-            // 
-            this.lblPasswordRegister.AutoSize = true;
-            this.lblPasswordRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblPasswordRegister.Location = new System.Drawing.Point(6, 211);
-            this.lblPasswordRegister.Name = "lblPasswordRegister";
-            this.lblPasswordRegister.Size = new System.Drawing.Size(82, 21);
-            this.lblPasswordRegister.TabIndex = 13;
-            this.lblPasswordRegister.Text = "Password";
-            // 
-            // lblCPasswordRegister
-            // 
-            this.lblCPasswordRegister.AutoSize = true;
-            this.lblCPasswordRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCPasswordRegister.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPasswordRegister.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblCPasswordRegister.Location = new System.Drawing.Point(386, 211);
-            this.lblCPasswordRegister.Name = "lblCPasswordRegister";
-            this.lblCPasswordRegister.Size = new System.Drawing.Size(147, 21);
-            this.lblCPasswordRegister.TabIndex = 14;
-            this.lblCPasswordRegister.Text = "Confirm Password";
             // 
             // register
             // 
