@@ -43,6 +43,7 @@ namespace Inventory_System
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.passwordIcon = new System.Windows.Forms.PictureBox();
             this.userIcon = new System.Windows.Forms.PictureBox();
+            this.lblRegisterNew = new System.Windows.Forms.Label();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
@@ -53,7 +54,7 @@ namespace Inventory_System
             this.lblForgotPassword.AutoSize = true;
             this.lblForgotPassword.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblForgotPassword.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.lblForgotPassword.Location = new System.Drawing.Point(117, 354);
+            this.lblForgotPassword.Location = new System.Drawing.Point(117, 376);
             this.lblForgotPassword.Name = "lblForgotPassword";
             this.lblForgotPassword.Size = new System.Drawing.Size(116, 17);
             this.lblForgotPassword.TabIndex = 5;
@@ -95,6 +96,7 @@ namespace Inventory_System
             // 
             // loginpanel
             // 
+            this.loginpanel.Controls.Add(this.lblRegisterNew);
             this.loginpanel.Controls.Add(this.lblErrorMsg);
             this.loginpanel.Controls.Add(this.lblForgotPassword);
             this.loginpanel.Controls.Add(this.txtUsername);
@@ -136,6 +138,18 @@ namespace Inventory_System
             this.userIcon.TabIndex = 1;
             this.userIcon.TabStop = false;
             // 
+            // lblRegisterNew
+            // 
+            this.lblRegisterNew.AutoSize = true;
+            this.lblRegisterNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegisterNew.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblRegisterNew.Location = new System.Drawing.Point(81, 330);
+            this.lblRegisterNew.Name = "lblRegisterNew";
+            this.lblRegisterNew.Size = new System.Drawing.Size(201, 16);
+            this.lblRegisterNew.TabIndex = 7;
+            this.lblRegisterNew.Text = "Don\'t have an account? Register";
+            this.lblRegisterNew.Click += new System.EventHandler(this.lblRegisterNew_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,7 +161,6 @@ namespace Inventory_System
             this.Name = "login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            //this.Load += new System.EventHandler(this.login_Load);
             this.loginpanel.ResumeLayout(false);
             this.loginpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).EndInit();
@@ -165,6 +178,7 @@ namespace Inventory_System
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel loginpanel;
         private System.Windows.Forms.Label lblErrorMsg;
+        private System.Windows.Forms.Label lblRegisterNew;
     }
 }
 

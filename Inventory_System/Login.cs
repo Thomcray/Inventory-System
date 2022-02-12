@@ -100,6 +100,12 @@ namespace Inventory_System
                 lblErrorMsg.Text = "";
             }
         }
-       
+
+        private void lblRegisterNew_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            register newReg = new register();
+            newReg.ShowDialog();
+        }
     }
 }
