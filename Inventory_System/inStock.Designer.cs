@@ -65,14 +65,16 @@
             // 
             // btnCloseStock
             // 
-            this.btnCloseStock.BackColor = System.Drawing.Color.Red;
-            this.btnCloseStock.FlatAppearance.BorderSize = 0;
+            this.btnCloseStock.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseStock.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseStock.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseStock.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseStock.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseStock.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseStock.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseStock.Location = new System.Drawing.Point(1084, 6);
+            this.btnCloseStock.Location = new System.Drawing.Point(1102, 11);
             this.btnCloseStock.Name = "btnCloseStock";
-            this.btnCloseStock.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseStock.Size = new System.Drawing.Size(30, 30);
             this.btnCloseStock.TabIndex = 0;
             this.btnCloseStock.Text = "x";
             this.btnCloseStock.UseVisualStyleBackColor = false;

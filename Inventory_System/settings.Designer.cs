@@ -62,14 +62,16 @@
             // 
             // btnCloseSettings
             // 
-            this.btnCloseSettings.BackColor = System.Drawing.Color.Red;
-            this.btnCloseSettings.FlatAppearance.BorderSize = 0;
+            this.btnCloseSettings.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseSettings.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseSettings.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseSettings.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseSettings.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseSettings.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseSettings.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseSettings.Location = new System.Drawing.Point(786, 7);
+            this.btnCloseSettings.Location = new System.Drawing.Point(803, 8);
             this.btnCloseSettings.Name = "btnCloseSettings";
-            this.btnCloseSettings.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseSettings.Size = new System.Drawing.Size(30, 30);
             this.btnCloseSettings.TabIndex = 0;
             this.btnCloseSettings.Text = "x";
             this.btnCloseSettings.UseVisualStyleBackColor = false;

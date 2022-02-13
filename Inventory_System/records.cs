@@ -36,7 +36,7 @@ namespace Inventory_System
             if(_User == "admin")
             {
                 con.Open();
-                SqlCommand frdCMD = new SqlCommand("select item_id as 'ItemID', transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', utype as 'User Role', date as Date, company_name as 'Company Name' from sales where company_name = '" + _CompanyName + "' and NOT iname = '' ORDER BY date DESC", con);
+                SqlCommand frdCMD = new SqlCommand("select transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', utype as 'User Role', date as Date, company_name as 'Company Name' from sales where company_name = '" + _CompanyName + "' and NOT iname = '' ORDER BY date DESC", con);
                 SqlDataAdapter frdSDA = new SqlDataAdapter(frdCMD);
                 DataTable frdDT = new DataTable();
                 frdSDA.Fill(frdDT);
@@ -46,7 +46,7 @@ namespace Inventory_System
             else
             {
                 con.Open();
-                SqlCommand frdCMD = new SqlCommand("select item_id as 'ItemID', transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', date as Date, company_name as 'Company Name' from sales where  utype = '" + _User + "' and userid = '" + _UserID + "' and company_name = '" + _CompanyName + "' and NOT iname = '' ORDER BY date DESC", con);
+                SqlCommand frdCMD = new SqlCommand("select transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', date as Date, company_name as 'Company Name' from sales where  utype = '" + _User + "' and userid = '" + _UserID + "' and company_name = '" + _CompanyName + "' and NOT iname = '' ORDER BY date DESC", con);
                 SqlDataAdapter frdSDA = new SqlDataAdapter(frdCMD);
                 DataTable frdDT = new DataTable();
                 frdSDA.Fill(frdDT);
@@ -73,7 +73,7 @@ namespace Inventory_System
         private void searchRecordsByDate_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand srbdCMD = new SqlCommand("select item_id as 'ItemID', transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', date as Date, company_name as 'Company Name' from sales where date BETWEEN '" + startDateValue.Value + "' AND '"+ endDateValue.Value +"' AND company_name = '" + _CompanyName + "' ORDER BY date DESC", con);
+            SqlCommand srbdCMD = new SqlCommand("select transaction_id as 'TxnID', qty as Quantity, iname as 'Item Name', description as Description, brand as Brand, uprice as 'Unit Price(NGN)', cost as 'Cost(NGN)', sub_total as 'Sub Total(NGN)', total as 'Total(NGN)', discount as 'Discount %', ptype as 'Payment Method', date as Date, company_name as 'Company Name' from sales where date BETWEEN '" + startDateValue.Value + "' AND '"+ endDateValue.Value +"' AND company_name = '" + _CompanyName + "' ORDER BY date DESC", con);
             SqlDataAdapter srbdDA = new SqlDataAdapter(srbdCMD);
             DataTable srbdDT = new DataTable();
             srbdDA.Fill(srbdDT);

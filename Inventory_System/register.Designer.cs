@@ -48,6 +48,7 @@
             this.toolTipRegister = new System.Windows.Forms.ToolTip(this.components);
             this.lblRegister = new System.Windows.Forms.Label();
             this.lblPasswordMsg = new System.Windows.Forms.Label();
+            this.btnCloseRegister = new System.Windows.Forms.Button();
             this.panelRegister.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -271,10 +272,26 @@
             // 
             this.lblPasswordMsg.AutoSize = true;
             this.lblPasswordMsg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordMsg.Location = new System.Drawing.Point(326, 55);
+            this.lblPasswordMsg.Location = new System.Drawing.Point(38, 55);
             this.lblPasswordMsg.Name = "lblPasswordMsg";
             this.lblPasswordMsg.Size = new System.Drawing.Size(0, 17);
             this.lblPasswordMsg.TabIndex = 8;
+            // 
+            // btnCloseRegister
+            // 
+            this.btnCloseRegister.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseRegister.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCloseRegister.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCloseRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseRegister.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCloseRegister.Location = new System.Drawing.Point(794, 5);
+            this.btnCloseRegister.Name = "btnCloseRegister";
+            this.btnCloseRegister.Size = new System.Drawing.Size(30, 30);
+            this.btnCloseRegister.TabIndex = 9;
+            this.btnCloseRegister.Text = "x";
+            this.btnCloseRegister.UseVisualStyleBackColor = true;
+            this.btnCloseRegister.Click += new System.EventHandler(this.btnCloseRegister_Click);
             // 
             // register
             // 
@@ -282,6 +299,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(828, 545);
+            this.Controls.Add(this.btnCloseRegister);
             this.Controls.Add(this.lblPasswordMsg);
             this.Controls.Add(this.lblRegister);
             this.Controls.Add(this.panelRegister);
@@ -317,5 +335,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblPhoneRegister;
         private System.Windows.Forms.Label lblNameRegister;
+        private System.Windows.Forms.Button btnCloseRegister;
     }
 }

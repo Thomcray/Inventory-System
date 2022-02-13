@@ -31,6 +31,15 @@ namespace Inventory_System
             _UserID = userID;
             _User = user;
             _CompanyName = companyName;
+
+            //PREVENT DEFAULT BLUE SELECTION OF CELL FROM MUDISPLAYGRID
+            muDisplayGrid.DefaultCellStyle.SelectionBackColor = Color.White;
+            muDisplayGrid.DefaultCellStyle.SelectionForeColor = Color.Black;
+
+            //txtCPasswordChange maxlength
+            txtCPasswordChange.MaxLength = 16;
+            //txtMUNewPassword maxlength
+            txtMUNewPassword.MaxLength = 16;
         }
 
         SqlConnection con = new SqlConnection("Data Source = localhost; Initial Catalog = Inventory; Integrated Security = True");
@@ -50,7 +59,6 @@ namespace Inventory_System
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
            
@@ -123,7 +131,6 @@ namespace Inventory_System
 
                 MessageBox.Show(ex.Message);
             }
-            
         }
 
         private void txtMUNewCPassword_KeyUp(object sender, KeyEventArgs e)
@@ -134,6 +141,13 @@ namespace Inventory_System
                 msgNewUserPanel.BackColor = Color.Red;
                 btnMUNewUser.Visible = false;
                 lblNewUserMsg.Text = "Password do not match.";
+            }
+            else if (txtMUNewPassword.TextLength < 8 || txtMUNewPassword.MaxLength == 16)
+            {
+                msgNewUserPanel.Visible = true;
+                msgNewUserPanel.BackColor = Color.Red;
+                btnMUNewUser.Visible = false;
+                lblNewUserMsg.Text = "Password should be at least 8 characters less than 16.";
             }
             else
             {
@@ -222,12 +236,19 @@ namespace Inventory_System
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (txtCPasswordChange.Text == "")
                 {
-                    MessageBox.Show("Enter new password to make changes.");
+                    lblMUChangePMsg.Text = "Enter new password to make changes.";
+                    lblMUChangePMsg.BackColor = Color.Red;
+                    return;
+                }
+                else if(txtCPasswordChange.TextLength < 8 || txtCPasswordChange.MaxLength > 16)
+                {
+
+                    lblMUChangePMsg.Text = "Password should be at least 8 characters less than 16.";
+                    lblMUChangePMsg.BackColor = Color.Red;
                     return;
                 }
                 else
@@ -236,7 +257,8 @@ namespace Inventory_System
                     SqlCommand suCMD = new SqlCommand("update users set password = '"+ txtCPasswordChange.Text +"' where id = '" + txtMUUserID.Text + "' AND company_name = '" + _CompanyName + "'", con);
                     suCMD.ExecuteNonQuery();
                     con.Close();
-                    MessageBox.Show("Password changed successfully.");
+                    lblMUChangePMsg.Text = "Password changed successfully.";
+                    lblMUChangePMsg.BackColor = Color.DarkSeaGreen;
                     txtPasswordChange.Clear();
                     txtCPasswordChange.Clear();
                 }

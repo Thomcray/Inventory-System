@@ -74,6 +74,7 @@
             this.lblCNewPassword = new System.Windows.Forms.Label();
             this.panelChangePassword = new System.Windows.Forms.Panel();
             this.btnChangePassword = new System.Windows.Forms.Button();
+            this.lblMUChangePMsg = new System.Windows.Forms.Label();
             this.muTopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.muDisplayGrid)).BeginInit();
             this.muGroupSearch.SuspendLayout();
@@ -91,6 +92,7 @@
             // muTopPanel
             // 
             this.muTopPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.muTopPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.muTopPanel.Controls.Add(this.btnCloseMU);
             this.muTopPanel.Location = new System.Drawing.Point(-1, 0);
             this.muTopPanel.Name = "muTopPanel";
@@ -99,14 +101,16 @@
             // 
             // btnCloseMU
             // 
-            this.btnCloseMU.BackColor = System.Drawing.Color.Red;
-            this.btnCloseMU.FlatAppearance.BorderSize = 0;
+            this.btnCloseMU.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseMU.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseMU.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseMU.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseMU.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseMU.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseMU.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseMU.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseMU.Location = new System.Drawing.Point(892, 7);
+            this.btnCloseMU.Location = new System.Drawing.Point(909, 11);
             this.btnCloseMU.Name = "btnCloseMU";
-            this.btnCloseMU.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseMU.Size = new System.Drawing.Size(30, 30);
             this.btnCloseMU.TabIndex = 0;
             this.btnCloseMU.Text = "x";
             this.btnCloseMU.UseVisualStyleBackColor = false;
@@ -443,6 +447,7 @@
             this.txtMUNewPassword.Size = new System.Drawing.Size(187, 22);
             this.txtMUNewPassword.TabIndex = 4;
             this.txtMUNewPassword.UseSystemPasswordChar = true;
+            this.txtMUNewPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtMUNewCPassword_KeyUp);
             // 
             // txtMUNewCName
             // 
@@ -475,7 +480,7 @@
             // ActivateUserIcon
             // 
             this.ActivateUserIcon.Image = global::Inventory_System.Properties.Resources.activateUser;
-            this.ActivateUserIcon.Location = new System.Drawing.Point(817, 169);
+            this.ActivateUserIcon.Location = new System.Drawing.Point(817, 162);
             this.ActivateUserIcon.Name = "ActivateUserIcon";
             this.ActivateUserIcon.Size = new System.Drawing.Size(26, 27);
             this.ActivateUserIcon.TabIndex = 9;
@@ -549,6 +554,7 @@
             // 
             // panelChangePassword
             // 
+            this.panelChangePassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelChangePassword.Controls.Add(this.btnChangePassword);
             this.panelChangePassword.Controls.Add(this.txtPasswordChange);
             this.panelChangePassword.Controls.Add(this.lblCNewPassword);
@@ -574,11 +580,23 @@
             this.btnChangePassword.UseVisualStyleBackColor = false;
             this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
+            // lblMUChangePMsg
+            // 
+            this.lblMUChangePMsg.AutoSize = true;
+            this.lblMUChangePMsg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMUChangePMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMUChangePMsg.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblMUChangePMsg.Location = new System.Drawing.Point(44, 412);
+            this.lblMUChangePMsg.Name = "lblMUChangePMsg";
+            this.lblMUChangePMsg.Size = new System.Drawing.Size(0, 16);
+            this.lblMUChangePMsg.TabIndex = 16;
+            // 
             // manageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(942, 711);
+            this.Controls.Add(this.lblMUChangePMsg);
             this.Controls.Add(this.panelChangePassword);
             this.Controls.Add(this.MURefreshIcon);
             this.Controls.Add(this.ActivateUserIcon);
@@ -666,5 +684,6 @@
         private System.Windows.Forms.Label lblCNewPassword;
         private System.Windows.Forms.Panel panelChangePassword;
         private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Label lblMUChangePMsg;
     }
 }

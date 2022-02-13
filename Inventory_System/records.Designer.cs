@@ -54,14 +54,16 @@
             // 
             // btnCloseRecords
             // 
-            this.btnCloseRecords.BackColor = System.Drawing.Color.Red;
-            this.btnCloseRecords.FlatAppearance.BorderSize = 0;
+            this.btnCloseRecords.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseRecords.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseRecords.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseRecords.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseRecords.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseRecords.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseRecords.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseRecords.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseRecords.Location = new System.Drawing.Point(1176, 7);
+            this.btnCloseRecords.Location = new System.Drawing.Point(1194, 11);
             this.btnCloseRecords.Name = "btnCloseRecords";
-            this.btnCloseRecords.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseRecords.Size = new System.Drawing.Size(30, 30);
             this.btnCloseRecords.TabIndex = 0;
             this.btnCloseRecords.Text = "x";
             this.btnCloseRecords.UseVisualStyleBackColor = false;

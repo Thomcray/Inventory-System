@@ -60,7 +60,6 @@ namespace Inventory_System
                         userID = myReader["id"].ToString();
                         user = myReader["username"].ToString();
                         companyName = myReader["company_name"].ToString();
-                        //MessageBox.Show(userID);
                         ProgressBar pb = new ProgressBar(this, userID, user, companyName);
                         pb.Show();
                         this.Hide();
@@ -72,9 +71,8 @@ namespace Inventory_System
             else
             {
                 lblErrorMsg.Text = "Invalid username or password";
+                lblErrorMsg.BackColor = Color.Red;
             }
-            //con.Close();
-
         }
 
         private void passwordIcon_Click(object sender, EventArgs e)
@@ -94,6 +92,7 @@ namespace Inventory_System
             if (txtPassword.TextLength < 8 || txtPassword.MaxLength > 16)
             {
                 lblErrorMsg.Text = "Password should be atleast 8 characters less than 16";
+                lblErrorMsg.BackColor = Color.Red;
             }
             else
             {
@@ -106,6 +105,18 @@ namespace Inventory_System
             this.Hide();
             register newReg = new register();
             newReg.ShowDialog();
+        }
+
+        private void btnCloseLogin_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblForgotPassword_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            forgotPassword recoverWindow = new forgotPassword();
+            recoverWindow.ShowDialog();
         }
     }
 }

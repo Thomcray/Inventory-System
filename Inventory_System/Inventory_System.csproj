@@ -65,6 +65,12 @@
     <Compile Include="category.Designer.cs">
       <DependentUpon>category.cs</DependentUpon>
     </Compile>
+    <Compile Include="forgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotPassword.Designer.cs">
+      <DependentUpon>forgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="inStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="category.resx">
       <DependentUpon>category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotPassword.resx">
+      <DependentUpon>forgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inStock.resx">
       <DependentUpon>inStock.cs</DependentUpon>

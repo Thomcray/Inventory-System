@@ -88,14 +88,16 @@
             // 
             // btnCloseAddItems
             // 
-            this.btnCloseAddItems.BackColor = System.Drawing.Color.Red;
-            this.btnCloseAddItems.FlatAppearance.BorderSize = 0;
+            this.btnCloseAddItems.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseAddItems.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseAddItems.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseAddItems.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseAddItems.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseAddItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseAddItems.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseAddItems.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseAddItems.Location = new System.Drawing.Point(1213, 3);
+            this.btnCloseAddItems.Location = new System.Drawing.Point(1228, 9);
             this.btnCloseAddItems.Name = "btnCloseAddItems";
-            this.btnCloseAddItems.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseAddItems.Size = new System.Drawing.Size(30, 30);
             this.btnCloseAddItems.TabIndex = 0;
             this.btnCloseAddItems.Text = "x";
             this.btnCloseAddItems.UseVisualStyleBackColor = false;
@@ -412,13 +414,14 @@
             // lblUpdMsg
             // 
             this.lblUpdMsg.AutoSize = true;
-            this.lblUpdMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUpdMsg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUpdMsg.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUpdMsg.Location = new System.Drawing.Point(3, 6);
             this.lblUpdMsg.Name = "lblUpdMsg";
-            this.lblUpdMsg.Size = new System.Drawing.Size(269, 20);
+            this.lblUpdMsg.Size = new System.Drawing.Size(533, 17);
             this.lblUpdMsg.TabIndex = 0;
-            this.lblUpdMsg.Text = "Columns with asterisk (*) are editable";
+            this.lblUpdMsg.Text = "Columns with asterisk (*) are editable. Ensure to press update button after editi" +
+    "ng";
             // 
             // stockTableAdapter
             // 

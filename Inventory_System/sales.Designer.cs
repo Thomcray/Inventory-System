@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.saleTopPanel = new System.Windows.Forms.Panel();
+            this.lblDateTimeNow1 = new System.Windows.Forms.Label();
             this.btnCloseSale = new System.Windows.Forms.Button();
             this.saleSearchPanel = new System.Windows.Forms.Panel();
             this.searchSaleIcon = new System.Windows.Forms.PictureBox();
@@ -75,7 +76,7 @@
             this.removeListItemIcon = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.timerDateAndTime1 = new System.Windows.Forms.Timer(this.components);
-            this.lblDateTimeNow1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.saleTopPanel.SuspendLayout();
             this.saleSearchPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.searchSaleIcon)).BeginInit();
@@ -100,16 +101,30 @@
             this.saleTopPanel.Size = new System.Drawing.Size(943, 53);
             this.saleTopPanel.TabIndex = 0;
             // 
+            // lblDateTimeNow1
+            // 
+            this.lblDateTimeNow1.AutoSize = true;
+            this.lblDateTimeNow1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblDateTimeNow1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateTimeNow1.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblDateTimeNow1.Location = new System.Drawing.Point(8, 14);
+            this.lblDateTimeNow1.Name = "lblDateTimeNow1";
+            this.lblDateTimeNow1.Size = new System.Drawing.Size(25, 17);
+            this.lblDateTimeNow1.TabIndex = 26;
+            this.lblDateTimeNow1.Text = "{?}";
+            // 
             // btnCloseSale
             // 
-            this.btnCloseSale.BackColor = System.Drawing.Color.Red;
-            this.btnCloseSale.FlatAppearance.BorderSize = 0;
+            this.btnCloseSale.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseSale.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseSale.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseSale.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseSale.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseSale.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseSale.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseSale.Location = new System.Drawing.Point(890, 3);
+            this.btnCloseSale.Location = new System.Drawing.Point(906, 6);
             this.btnCloseSale.Name = "btnCloseSale";
-            this.btnCloseSale.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseSale.Size = new System.Drawing.Size(30, 30);
             this.btnCloseSale.TabIndex = 0;
             this.btnCloseSale.Text = "x";
             this.btnCloseSale.UseVisualStyleBackColor = false;
@@ -418,7 +433,7 @@
             // 
             this.lblSaleDiscount.AutoSize = true;
             this.lblSaleDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaleDiscount.Location = new System.Drawing.Point(634, 529);
+            this.lblSaleDiscount.Location = new System.Drawing.Point(629, 529);
             this.lblSaleDiscount.Name = "lblSaleDiscount";
             this.lblSaleDiscount.Size = new System.Drawing.Size(60, 16);
             this.lblSaleDiscount.TabIndex = 14;
@@ -442,20 +457,22 @@
             // txtSaleDiscount
             // 
             this.txtSaleDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaleDiscount.Location = new System.Drawing.Point(697, 526);
+            this.txtSaleDiscount.Location = new System.Drawing.Point(692, 526);
             this.txtSaleDiscount.Name = "txtSaleDiscount";
-            this.txtSaleDiscount.Size = new System.Drawing.Size(58, 22);
+            this.txtSaleDiscount.Size = new System.Drawing.Size(42, 22);
             this.txtSaleDiscount.TabIndex = 17;
             // 
             // lblDiscountName
             // 
             this.lblDiscountName.AutoSize = true;
+            this.lblDiscountName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblDiscountName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscountName.ForeColor = System.Drawing.Color.Maroon;
-            this.lblDiscountName.Location = new System.Drawing.Point(636, 552);
+            this.lblDiscountName.ForeColor = System.Drawing.Color.DimGray;
+            this.lblDiscountName.Location = new System.Drawing.Point(630, 552);
             this.lblDiscountName.Name = "lblDiscountName";
-            this.lblDiscountName.Size = new System.Drawing.Size(0, 16);
+            this.lblDiscountName.Size = new System.Drawing.Size(100, 16);
             this.lblDiscountName.TabIndex = 19;
+            this.lblDiscountName.Text = "SALECOUPON";
             // 
             // lblSuTotal
             // 
@@ -562,23 +579,23 @@
             // 
             this.timerDateAndTime1.Tick += new System.EventHandler(this.timerDateAndTime1_Tick);
             // 
-            // lblDateTimeNow1
+            // label3
             // 
-            this.lblDateTimeNow1.AutoSize = true;
-            this.lblDateTimeNow1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDateTimeNow1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateTimeNow1.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblDateTimeNow1.Location = new System.Drawing.Point(8, 14);
-            this.lblDateTimeNow1.Name = "lblDateTimeNow1";
-            this.lblDateTimeNow1.Size = new System.Drawing.Size(25, 17);
-            this.lblDateTimeNow1.TabIndex = 26;
-            this.lblDateTimeNow1.Text = "{?}";
+            this.label3.AutoSize = true;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(735, 529);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(20, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "%";
             // 
             // sales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(940, 711);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblTxnID);
             this.Controls.Add(this.txtTxnID);
             this.Controls.Add(this.discountMsgPanel);
@@ -673,5 +690,6 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Timer timerDateAndTime1;
         private System.Windows.Forms.Label lblDateTimeNow1;
+        private System.Windows.Forms.Label label3;
     }
 }

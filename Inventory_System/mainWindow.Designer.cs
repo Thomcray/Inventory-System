@@ -31,13 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainWindow));
             this.menuPanel = new System.Windows.Forms.Panel();
-            this.settingsIcon = new System.Windows.Forms.PictureBox();
-            this.itemStockIcon = new System.Windows.Forms.PictureBox();
-            this.recordsIcon = new System.Windows.Forms.PictureBox();
-            this.salesIcon = new System.Windows.Forms.PictureBox();
-            this.categoryIcon = new System.Windows.Forms.PictureBox();
-            this.addItemsIcon = new System.Windows.Forms.PictureBox();
-            this.dashboardIcon = new System.Windows.Forms.PictureBox();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnRecords = new System.Windows.Forms.Button();
@@ -46,6 +39,8 @@
             this.btnMenuItem = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.loggedUserPanel = new System.Windows.Forms.Panel();
+            this.btnMainMaximize = new System.Windows.Forms.Button();
+            this.btnMainMinimize = new System.Windows.Forms.Button();
             this.btnCloseMain = new System.Windows.Forms.Button();
             this.lblLoggedUser = new System.Windows.Forms.Label();
             this.btnTotalSalesT = new System.Windows.Forms.Button();
@@ -62,12 +57,28 @@
             this.sumTotalSale = new System.Windows.Forms.Label();
             this.footerPanel = new System.Windows.Forms.Panel();
             this.lblDateTimeNow = new System.Windows.Forms.Label();
-            this.dashLogOutIcon = new System.Windows.Forms.PictureBox();
             this.lblManageUsers = new System.Windows.Forms.Label();
             this.lblLogOut = new System.Windows.Forms.Label();
-            this.dashRefreshIcon = new System.Windows.Forms.PictureBox();
             this.timerDateAndTime = new System.Windows.Forms.Timer(this.components);
+            this.dashRefreshIcon = new System.Windows.Forms.PictureBox();
+            this.dashLogOutIcon = new System.Windows.Forms.PictureBox();
+            this.settingsIcon = new System.Windows.Forms.PictureBox();
+            this.itemStockIcon = new System.Windows.Forms.PictureBox();
+            this.recordsIcon = new System.Windows.Forms.PictureBox();
+            this.salesIcon = new System.Windows.Forms.PictureBox();
+            this.categoryIcon = new System.Windows.Forms.PictureBox();
+            this.addItemsIcon = new System.Windows.Forms.PictureBox();
+            this.dashboardIcon = new System.Windows.Forms.PictureBox();
+            this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             this.menuPanel.SuspendLayout();
+            this.loggedUserPanel.SuspendLayout();
+            this.totalSaleTPanel.SuspendLayout();
+            this.TotalItemsPanel.SuspendLayout();
+            this.totalRecordsPanel.SuspendLayout();
+            this.totalSalesPanel.SuspendLayout();
+            this.footerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dashRefreshIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashLogOutIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemStockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordsIcon)).BeginInit();
@@ -75,14 +86,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.categoryIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addItemsIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).BeginInit();
-            this.loggedUserPanel.SuspendLayout();
-            this.totalSaleTPanel.SuspendLayout();
-            this.TotalItemsPanel.SuspendLayout();
-            this.totalRecordsPanel.SuspendLayout();
-            this.totalSalesPanel.SuspendLayout();
-            this.footerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashLogOutIcon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashRefreshIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -104,72 +107,8 @@
             this.menuPanel.Controls.Add(this.btnDashboard);
             this.menuPanel.Location = new System.Drawing.Point(0, 49);
             this.menuPanel.Name = "menuPanel";
-            this.menuPanel.Size = new System.Drawing.Size(234, 701);
+            this.menuPanel.Size = new System.Drawing.Size(234, 720);
             this.menuPanel.TabIndex = 0;
-            // 
-            // settingsIcon
-            // 
-            this.settingsIcon.Image = ((System.Drawing.Image)(resources.GetObject("settingsIcon.Image")));
-            this.settingsIcon.Location = new System.Drawing.Point(55, 636);
-            this.settingsIcon.Name = "settingsIcon";
-            this.settingsIcon.Size = new System.Drawing.Size(26, 27);
-            this.settingsIcon.TabIndex = 1;
-            this.settingsIcon.TabStop = false;
-            // 
-            // itemStockIcon
-            // 
-            this.itemStockIcon.Image = ((System.Drawing.Image)(resources.GetObject("itemStockIcon.Image")));
-            this.itemStockIcon.Location = new System.Drawing.Point(55, 319);
-            this.itemStockIcon.Name = "itemStockIcon";
-            this.itemStockIcon.Size = new System.Drawing.Size(26, 27);
-            this.itemStockIcon.TabIndex = 1;
-            this.itemStockIcon.TabStop = false;
-            // 
-            // recordsIcon
-            // 
-            this.recordsIcon.Image = ((System.Drawing.Image)(resources.GetObject("recordsIcon.Image")));
-            this.recordsIcon.Location = new System.Drawing.Point(55, 273);
-            this.recordsIcon.Name = "recordsIcon";
-            this.recordsIcon.Size = new System.Drawing.Size(26, 27);
-            this.recordsIcon.TabIndex = 1;
-            this.recordsIcon.TabStop = false;
-            // 
-            // salesIcon
-            // 
-            this.salesIcon.Image = ((System.Drawing.Image)(resources.GetObject("salesIcon.Image")));
-            this.salesIcon.Location = new System.Drawing.Point(55, 227);
-            this.salesIcon.Name = "salesIcon";
-            this.salesIcon.Size = new System.Drawing.Size(26, 27);
-            this.salesIcon.TabIndex = 1;
-            this.salesIcon.TabStop = false;
-            // 
-            // categoryIcon
-            // 
-            this.categoryIcon.Image = ((System.Drawing.Image)(resources.GetObject("categoryIcon.Image")));
-            this.categoryIcon.Location = new System.Drawing.Point(55, 182);
-            this.categoryIcon.Name = "categoryIcon";
-            this.categoryIcon.Size = new System.Drawing.Size(26, 27);
-            this.categoryIcon.TabIndex = 1;
-            this.categoryIcon.TabStop = false;
-            // 
-            // addItemsIcon
-            // 
-            this.addItemsIcon.Image = ((System.Drawing.Image)(resources.GetObject("addItemsIcon.Image")));
-            this.addItemsIcon.Location = new System.Drawing.Point(55, 137);
-            this.addItemsIcon.Name = "addItemsIcon";
-            this.addItemsIcon.Size = new System.Drawing.Size(26, 27);
-            this.addItemsIcon.TabIndex = 1;
-            this.addItemsIcon.TabStop = false;
-            // 
-            // dashboardIcon
-            // 
-            this.dashboardIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dashboardIcon.Image = ((System.Drawing.Image)(resources.GetObject("dashboardIcon.Image")));
-            this.dashboardIcon.Location = new System.Drawing.Point(55, 93);
-            this.dashboardIcon.Name = "dashboardIcon";
-            this.dashboardIcon.Size = new System.Drawing.Size(26, 29);
-            this.dashboardIcon.TabIndex = 12;
-            this.dashboardIcon.TabStop = false;
             // 
             // btnSettings
             // 
@@ -177,7 +116,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSettings.Location = new System.Drawing.Point(87, 632);
+            this.btnSettings.Location = new System.Drawing.Point(87, 656);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(147, 40);
             this.btnSettings.TabIndex = 1;
@@ -276,23 +215,62 @@
             // loggedUserPanel
             // 
             this.loggedUserPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.loggedUserPanel.Controls.Add(this.btnMainMaximize);
+            this.loggedUserPanel.Controls.Add(this.btnMainMinimize);
             this.loggedUserPanel.Controls.Add(this.btnCloseMain);
             this.loggedUserPanel.Controls.Add(this.lblLoggedUser);
-            this.loggedUserPanel.Location = new System.Drawing.Point(0, -1);
+            this.loggedUserPanel.Location = new System.Drawing.Point(-1, -1);
             this.loggedUserPanel.Name = "loggedUserPanel";
-            this.loggedUserPanel.Size = new System.Drawing.Size(1388, 53);
+            this.loggedUserPanel.Size = new System.Drawing.Size(1368, 53);
             this.loggedUserPanel.TabIndex = 2;
+            // 
+            // btnMainMaximize
+            // 
+            this.btnMainMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMainMaximize.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnMainMaximize.FlatAppearance.BorderSize = 2;
+            this.btnMainMaximize.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMainMaximize.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMainMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainMaximize.Font = new System.Drawing.Font("Lucida Console", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMaximize.Location = new System.Drawing.Point(1309, 25);
+            this.btnMainMaximize.Name = "btnMainMaximize";
+            this.btnMainMaximize.Size = new System.Drawing.Size(12, 12);
+            this.btnMainMaximize.TabIndex = 3;
+            this.btnMainMaximize.UseVisualStyleBackColor = true;
+            this.btnMainMaximize.Click += new System.EventHandler(this.btnMenuItem_Click);
+            // 
+            // btnMainMinimize
+            // 
+            this.btnMainMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMainMinimize.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMainMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMainMinimize.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMainMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnMainMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMainMinimize.Font = new System.Drawing.Font("Lucida Console", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMainMinimize.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnMainMinimize.Location = new System.Drawing.Point(1268, 10);
+            this.btnMainMinimize.Name = "btnMainMinimize";
+            this.btnMainMinimize.Size = new System.Drawing.Size(35, 35);
+            this.btnMainMinimize.TabIndex = 2;
+            this.btnMainMinimize.Text = "_";
+            this.btnMainMinimize.UseVisualStyleBackColor = false;
+            this.btnMainMinimize.Click += new System.EventHandler(this.btnMenuItem_Click);
             // 
             // btnCloseMain
             // 
-            this.btnCloseMain.BackColor = System.Drawing.Color.Red;
-            this.btnCloseMain.FlatAppearance.BorderSize = 0;
+            this.btnCloseMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseMain.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseMain.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseMain.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseMain.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseMain.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseMain.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseMain.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseMain.Location = new System.Drawing.Point(1292, 10);
+            this.btnCloseMain.Location = new System.Drawing.Point(1327, 15);
             this.btnCloseMain.Name = "btnCloseMain";
-            this.btnCloseMain.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseMain.Size = new System.Drawing.Size(30, 30);
             this.btnCloseMain.TabIndex = 1;
             this.btnCloseMain.Text = "x";
             this.btnCloseMain.UseVisualStyleBackColor = false;
@@ -464,7 +442,7 @@
             this.footerPanel.Controls.Add(this.dashLogOutIcon);
             this.footerPanel.Controls.Add(this.lblManageUsers);
             this.footerPanel.Controls.Add(this.lblLogOut);
-            this.footerPanel.Location = new System.Drawing.Point(240, 698);
+            this.footerPanel.Location = new System.Drawing.Point(240, 709);
             this.footerPanel.Name = "footerPanel";
             this.footerPanel.Size = new System.Drawing.Size(1100, 40);
             this.footerPanel.TabIndex = 11;
@@ -479,15 +457,6 @@
             this.lblDateTimeNow.Size = new System.Drawing.Size(25, 17);
             this.lblDateTimeNow.TabIndex = 3;
             this.lblDateTimeNow.Text = "{?}";
-            // 
-            // dashLogOutIcon
-            // 
-            this.dashLogOutIcon.Image = global::Inventory_System.Properties.Resources.logout_red;
-            this.dashLogOutIcon.Location = new System.Drawing.Point(1017, 10);
-            this.dashLogOutIcon.Name = "dashLogOutIcon";
-            this.dashLogOutIcon.Size = new System.Drawing.Size(26, 27);
-            this.dashLogOutIcon.TabIndex = 2;
-            this.dashLogOutIcon.TabStop = false;
             // 
             // lblManageUsers
             // 
@@ -514,6 +483,10 @@
             this.lblLogOut.Text = "LogOut";
             this.lblLogOut.Click += new System.EventHandler(this.lblItems);
             // 
+            // timerDateAndTime
+            // 
+            this.timerDateAndTime.Tick += new System.EventHandler(this.timerDateAndTime_Tick);
+            // 
             // dashRefreshIcon
             // 
             this.dashRefreshIcon.Image = global::Inventory_System.Properties.Resources.refresh_small;
@@ -524,16 +497,85 @@
             this.dashRefreshIcon.TabStop = false;
             this.dashRefreshIcon.Click += new System.EventHandler(this.dashRefreshIcon_Click);
             // 
-            // timerDateAndTime
+            // dashLogOutIcon
             // 
-            this.timerDateAndTime.Tick += new System.EventHandler(this.timerDateAndTime_Tick);
+            this.dashLogOutIcon.Image = global::Inventory_System.Properties.Resources.logout_red;
+            this.dashLogOutIcon.Location = new System.Drawing.Point(1017, 10);
+            this.dashLogOutIcon.Name = "dashLogOutIcon";
+            this.dashLogOutIcon.Size = new System.Drawing.Size(26, 27);
+            this.dashLogOutIcon.TabIndex = 2;
+            this.dashLogOutIcon.TabStop = false;
+            // 
+            // settingsIcon
+            // 
+            this.settingsIcon.Image = ((System.Drawing.Image)(resources.GetObject("settingsIcon.Image")));
+            this.settingsIcon.Location = new System.Drawing.Point(55, 660);
+            this.settingsIcon.Name = "settingsIcon";
+            this.settingsIcon.Size = new System.Drawing.Size(26, 27);
+            this.settingsIcon.TabIndex = 1;
+            this.settingsIcon.TabStop = false;
+            // 
+            // itemStockIcon
+            // 
+            this.itemStockIcon.Image = ((System.Drawing.Image)(resources.GetObject("itemStockIcon.Image")));
+            this.itemStockIcon.Location = new System.Drawing.Point(55, 319);
+            this.itemStockIcon.Name = "itemStockIcon";
+            this.itemStockIcon.Size = new System.Drawing.Size(26, 27);
+            this.itemStockIcon.TabIndex = 1;
+            this.itemStockIcon.TabStop = false;
+            // 
+            // recordsIcon
+            // 
+            this.recordsIcon.Image = ((System.Drawing.Image)(resources.GetObject("recordsIcon.Image")));
+            this.recordsIcon.Location = new System.Drawing.Point(55, 273);
+            this.recordsIcon.Name = "recordsIcon";
+            this.recordsIcon.Size = new System.Drawing.Size(26, 27);
+            this.recordsIcon.TabIndex = 1;
+            this.recordsIcon.TabStop = false;
+            // 
+            // salesIcon
+            // 
+            this.salesIcon.Image = ((System.Drawing.Image)(resources.GetObject("salesIcon.Image")));
+            this.salesIcon.Location = new System.Drawing.Point(55, 227);
+            this.salesIcon.Name = "salesIcon";
+            this.salesIcon.Size = new System.Drawing.Size(26, 27);
+            this.salesIcon.TabIndex = 1;
+            this.salesIcon.TabStop = false;
+            // 
+            // categoryIcon
+            // 
+            this.categoryIcon.Image = ((System.Drawing.Image)(resources.GetObject("categoryIcon.Image")));
+            this.categoryIcon.Location = new System.Drawing.Point(55, 182);
+            this.categoryIcon.Name = "categoryIcon";
+            this.categoryIcon.Size = new System.Drawing.Size(26, 27);
+            this.categoryIcon.TabIndex = 1;
+            this.categoryIcon.TabStop = false;
+            // 
+            // addItemsIcon
+            // 
+            this.addItemsIcon.Image = ((System.Drawing.Image)(resources.GetObject("addItemsIcon.Image")));
+            this.addItemsIcon.Location = new System.Drawing.Point(55, 137);
+            this.addItemsIcon.Name = "addItemsIcon";
+            this.addItemsIcon.Size = new System.Drawing.Size(26, 27);
+            this.addItemsIcon.TabIndex = 1;
+            this.addItemsIcon.TabStop = false;
+            // 
+            // dashboardIcon
+            // 
+            this.dashboardIcon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dashboardIcon.Image = ((System.Drawing.Image)(resources.GetObject("dashboardIcon.Image")));
+            this.dashboardIcon.Location = new System.Drawing.Point(55, 93);
+            this.dashboardIcon.Name = "dashboardIcon";
+            this.dashboardIcon.Size = new System.Drawing.Size(26, 29);
+            this.dashboardIcon.TabIndex = 12;
+            this.dashboardIcon.TabStop = false;
             // 
             // mainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1344, 750);
+            this.ClientSize = new System.Drawing.Size(1360, 750);
             this.Controls.Add(this.dashRefreshIcon);
             this.Controls.Add(this.footerPanel);
             this.Controls.Add(this.totalSalesPanel);
@@ -552,13 +594,6 @@
             this.Text = "Main Window";
             this.Load += new System.EventHandler(this.mainWindow_Load);
             this.menuPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.settingsIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemStockIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.recordsIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.salesIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoryIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.addItemsIcon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             this.loggedUserPanel.ResumeLayout(false);
             this.loggedUserPanel.PerformLayout();
             this.totalSaleTPanel.ResumeLayout(false);
@@ -571,8 +606,15 @@
             this.totalSalesPanel.PerformLayout();
             this.footerPanel.ResumeLayout(false);
             this.footerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashLogOutIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dashRefreshIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashLogOutIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.settingsIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemStockIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordsIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salesIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoryIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addItemsIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dashboardIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -621,5 +663,8 @@
         private System.Windows.Forms.Button btnCloseMain;
         private System.Windows.Forms.Timer timerDateAndTime;
         private System.Windows.Forms.Label lblDateTimeNow;
+        private System.Windows.Forms.Button btnMainMinimize;
+        private System.Windows.Forms.Button btnMainMaximize;
+        private System.Windows.Forms.ToolTip toolTipMain;
     }
 }

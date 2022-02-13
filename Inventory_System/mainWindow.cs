@@ -216,13 +216,17 @@ namespace Inventory_System
                     //_settings.Show();
                     break;
                 case "x":
-                   
                      DialogResult saleConfirm;
                      saleConfirm = MessageBox.Show("Are you sure you want to Exit?", "Inventory System", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (saleConfirm == DialogResult.Yes)
-                        timerDateAndTime.Stop();
                         Application.Exit();
-                    
+                        timerDateAndTime.Stop();
+                    break;
+                case "_":
+                    WindowState = FormWindowState.Minimized;
+                    break;
+                case "":
+                    WindowState = FormWindowState.Maximized;
                     break;
                 default:
                     MessageBox.Show("Invalid request");
@@ -237,11 +241,11 @@ namespace Inventory_System
             {
                 case "Manage Users":
                     manageUsers muUsers = new manageUsers(login, _UserID, _User, _CompanyName);
-                    muUsers.Show();
+                    muUsers.ShowDialog();
                     break;
                 case "LogOut":
                     this.Hide();
-                    login.Show();
+                    login.ShowDialog();
                     break;
                 default:
                     MessageBox.Show("Invalid request");
@@ -254,5 +258,6 @@ namespace Inventory_System
             DateTime now = DateTime.Now;
             lblDateTimeNow.Text = now.ToString("F");
         }
+
     }
 }

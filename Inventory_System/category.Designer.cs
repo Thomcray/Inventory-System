@@ -52,14 +52,16 @@
             // 
             // btnCloseCategory
             // 
-            this.btnCloseCategory.BackColor = System.Drawing.Color.Red;
-            this.btnCloseCategory.FlatAppearance.BorderSize = 0;
+            this.btnCloseCategory.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseCategory.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseCategory.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnCloseCategory.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnCloseCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseCategory.Font = new System.Drawing.Font("Lucida Console", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseCategory.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCloseCategory.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCloseCategory.Location = new System.Drawing.Point(699, 6);
+            this.btnCloseCategory.Location = new System.Drawing.Point(716, 9);
             this.btnCloseCategory.Name = "btnCloseCategory";
-            this.btnCloseCategory.Size = new System.Drawing.Size(51, 39);
+            this.btnCloseCategory.Size = new System.Drawing.Size(30, 30);
             this.btnCloseCategory.TabIndex = 0;
             this.btnCloseCategory.Text = "x";
             this.btnCloseCategory.UseVisualStyleBackColor = false;

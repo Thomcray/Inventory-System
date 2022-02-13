@@ -16,7 +16,7 @@ namespace Inventory_System
         public register()
         {
             InitializeComponent();
-            txtCPasswordRegister.MaxLength = 16;
+            txtPasswordRegister.MaxLength = 16;
         }
 
         SqlConnection con = new SqlConnection("Data Source = localhost; Initial Catalog = Inventory; Integrated Security = True");
@@ -65,6 +65,11 @@ namespace Inventory_System
                 lblPasswordMsg.ForeColor = SystemColors.Control;
                 lblPasswordMsg.BackColor = Color.Red;
                 return;
+            }else if (txtPasswordRegister.TextLength < 8 || txtPasswordRegister.MaxLength > 16)
+            {
+                lblPasswordMsg.Text = "Password should be at least 8 characters less than 16";
+                lblPasswordMsg.ForeColor = SystemColors.Control;
+                lblPasswordMsg.BackColor = Color.Red;
             }
             else
             {
@@ -115,6 +120,11 @@ namespace Inventory_System
             this.Hide();
             login _login = new login();
             _login.ShowDialog();
+        }
+
+        private void btnCloseRegister_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

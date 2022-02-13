@@ -40,11 +40,12 @@ namespace Inventory_System
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.loginpanel = new System.Windows.Forms.Panel();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.lblRegisterNew = new System.Windows.Forms.Label();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.passwordIcon = new System.Windows.Forms.PictureBox();
             this.userIcon = new System.Windows.Forms.PictureBox();
-            this.lblLogin = new System.Windows.Forms.Label();
+            this.btnCloseLogin = new System.Windows.Forms.Button();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.passwordIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userIcon)).BeginInit();
@@ -60,6 +61,7 @@ namespace Inventory_System
             this.lblForgotPassword.Size = new System.Drawing.Size(116, 17);
             this.lblForgotPassword.TabIndex = 5;
             this.lblForgotPassword.Text = "Forgot password";
+            this.lblForgotPassword.Click += new System.EventHandler(this.lblForgotPassword_Click);
             // 
             // btnLogin
             // 
@@ -106,10 +108,22 @@ namespace Inventory_System
             this.loginpanel.Controls.Add(this.btnLogin);
             this.loginpanel.Controls.Add(this.userIcon);
             this.loginpanel.Controls.Add(this.txtPassword);
-            this.loginpanel.Location = new System.Drawing.Point(23, 12);
+            this.loginpanel.Location = new System.Drawing.Point(21, 51);
             this.loginpanel.Name = "loginpanel";
-            this.loginpanel.Size = new System.Drawing.Size(336, 430);
+            this.loginpanel.Size = new System.Drawing.Size(336, 407);
             this.loginpanel.TabIndex = 6;
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblLogin.Location = new System.Drawing.Point(129, 25);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(77, 30);
+            this.lblLogin.TabIndex = 8;
+            this.lblLogin.Text = "Login";
             // 
             // lblRegisterNew
             // 
@@ -152,24 +166,29 @@ namespace Inventory_System
             this.userIcon.TabIndex = 1;
             this.userIcon.TabStop = false;
             // 
-            // lblLogin
+            // btnCloseLogin
             // 
-            this.lblLogin.AutoSize = true;
-            this.lblLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogin.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblLogin.Location = new System.Drawing.Point(129, 25);
-            this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(77, 30);
-            this.lblLogin.TabIndex = 8;
-            this.lblLogin.Text = "Login";
+            this.btnCloseLogin.FlatAppearance.BorderColor = System.Drawing.SystemColors.Control;
+            this.btnCloseLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCloseLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnCloseLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseLogin.Font = new System.Drawing.Font("Lucida Console", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCloseLogin.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnCloseLogin.Location = new System.Drawing.Point(342, 7);
+            this.btnCloseLogin.Name = "btnCloseLogin";
+            this.btnCloseLogin.Size = new System.Drawing.Size(30, 30);
+            this.btnCloseLogin.TabIndex = 7;
+            this.btnCloseLogin.Text = "x";
+            this.btnCloseLogin.UseVisualStyleBackColor = true;
+            this.btnCloseLogin.Click += new System.EventHandler(this.btnCloseLogin_Click);
             // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(378, 454);
+            this.ClientSize = new System.Drawing.Size(378, 470);
+            this.Controls.Add(this.btnCloseLogin);
             this.Controls.Add(this.loginpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "login";
@@ -194,6 +213,7 @@ namespace Inventory_System
         private System.Windows.Forms.Label lblErrorMsg;
         private System.Windows.Forms.Label lblRegisterNew;
         private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.Button btnCloseLogin;
     }
 }
 
